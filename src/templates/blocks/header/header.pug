@@ -1,7 +1,20 @@
 mixin header()
   .svg-sprite
     include ../sprite/svg.svg
+  .menu
+    +b.UL.app-menu
+      +e.LI.item
+        a(href="#") Product
+      +e.LI.item
+        a(href="#") Company
+      +e.LI.item
+        a(href="#") Prices
+      +e.LI.item
+        a(href="#" class="btn") Get started
   +b.header
-    +e.H3.title Hello from header again
-    svg.icon
-      use(xlink:href="#logo")
+    +e.logo
+      img(src="/assets/images/logo.svg", alt="teamlify logo")
+    +b.menu-icon
+      +e.item
+      +e.item
+      +e.item
