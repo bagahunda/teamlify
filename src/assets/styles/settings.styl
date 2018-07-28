@@ -37,6 +37,7 @@ a
   padding 6px 15px
   border none
   font inherit
+  font-size 14px
   color #232330
   background-color transparent
   background-image linear-gradient(-179deg, #D1F90A 3%, #0BCE52 100%)
@@ -44,6 +45,10 @@ a
   border-radius 100px
   cursor pointer
   outline none
+  appearance none
+
+  +above(480px)
+    font-size 21px
 
   &::-moz-focus-inner
     border none
@@ -55,8 +60,24 @@ a
   &:hover, &:focus
     background-color #fff
     background-image none
-    color #C2F50F
+    color #0BCE52
 
 img
   max-width 100%
   height auto
+
+.title
+    margin 0 0 10px
+    font-size 22px
+    font-weight normal
+    color #C2F50F
+
+    +above(480px)
+      font-size 33px
+
+.lead
+  font-family "Plex Sans ExtraLight", sans-serif
+  font-size 14px
+
+  +above(480px)
+    font-size 21px

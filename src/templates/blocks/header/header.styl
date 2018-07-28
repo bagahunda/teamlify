@@ -1,11 +1,21 @@
 .header
-  padding 23px
+  position fixed
+  width 100%
+  height 87px
+  top 0
+  left 0
+  padding 0 23px
   display flex
   justify-content space-between
   align-items center
+  background-color #232330
+  z-index 9
+
+  +above(700px)
+    height 100px
 
   +above(800px)
-    padding 40px
+    padding 0 40px
 
   &__logo
     width 125px
@@ -15,7 +25,7 @@
 .menu
   position fixed
   right 0
-  top 70px
+  top 87px
   width 100%
   height 100%
   overflow hidden
@@ -30,8 +40,8 @@
   +above(700px)
     top 30px
 
-  +above(800px)
-    top 47px
+  // +above(800px)
+  //   top 47px
 
   &--visible
     pointer-events auto
