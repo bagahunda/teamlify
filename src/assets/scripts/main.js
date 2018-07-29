@@ -21,7 +21,23 @@
     oppMenu.addEventListener("click", toggleClassMenu, false);
     myMenu.addEventListener("click", toggleClassMenu, false);
 
-    const siema = new Siema();
+    const siema = new Siema({
+      perPage: {
+        1024: 3,
+      },
+    });
+
+    const siemaControls = document.querySelectorAll('.siema-controls button');
+    siemaControls[0].classList.add('active');
+    const buttons = Array.prototype.slice.call(siemaControls);
+    for (let i of buttons) {
+      i.addEventListener('click', () => {
+        siema.goTo(buttons.indexOf(i))
+        let active = document.querySelector('.active');
+        active.classList.remove('active');
+        siemaControls[buttons.indexOf(i)].classList.add('active');
+      });
+    }
 
   });
 
