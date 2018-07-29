@@ -1,0 +1,26 @@
+mixin prices()
+  +b.prices
+    h2.title.title--inner
+      | Prices
+    p.lead.lead--inner
+      | We believe in transparent prices: there are no hidden fees, extra costs or credit cards required up front. Don’t get confused  by tricky pricing plans.
+    +e.TABLE.table
+      tbody
+        tr
+          td
+            | < 5 users
+          td
+            | Free
+            span
+              | Only free trial for 6 months
+          td
+            a.btn(href="#") Get started
+        tr
+          td
+            | >= 5 users
+          td
+            | 5$ for user
+            span
+              | Unlimited projects
+          td
+            a.btn(href="#") Get started

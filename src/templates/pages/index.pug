@@ -7,6 +7,7 @@ include ../blocks/progress/progress
 include ../blocks/updates/updates
 include ../blocks/updates/updates-big
 include ../blocks/remote/remote
+include ../blocks/prices/prices
 include ../blocks/footer/footer
 include ../blocks/scripts/scripts
 
@@ -27,6 +28,7 @@ html(lang='ru')
     +updates()
     +updates-big()
     +remote()
+    +prices()
     +footer()
     block scripts
     +scripts(['https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', 'build.js'])
