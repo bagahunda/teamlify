@@ -33,6 +33,13 @@
       right -150px
       bottom 50px
 
+  &--big
+    +above(900px)
+      width 100%
+
+    +above(950px)
+      width 950px
+
 .slider-container
   position relative
   margin-bottom 20px
@@ -51,9 +58,6 @@
     width 100%
     +above(1024px)
       width auto
-
-  // div div
-  //   width 414px !important
 
   & > div
     & > div
@@ -83,6 +87,12 @@
   .siema-controls
     +above(600px)
       display none
+
+.updates-container
+
+  img
+    +above(1024px)
+      max-width none
 
 .updates-slider
   padding-left 20px

@@ -29,6 +29,10 @@
       },
       onChange: function() {
         const target = document.querySelector('.updates-slider');
+        const updatesControls = document.querySelectorAll('.slider-container .siema-controls button');
+        let active = document.querySelector('.slider-container .active');
+        active.classList.remove('active');
+        updatesControls[this.currentSlide].classList.add('active');
         if (progress.currentSlide === 1) {
           target.style.paddingLeft = "12%";
         } else {
@@ -41,6 +45,12 @@
     const siema = new Siema({
       perPage: {
         1024: 3,
+      },
+      onChange: function() {
+        const updatesControls = document.querySelectorAll('.updates-container .siema-controls button');
+        let active = document.querySelector('.updates-container .active');
+        active.classList.remove('active');
+        updatesControls[this.currentSlide].classList.add('active');
       }
     });
 
@@ -50,7 +60,7 @@
     for (let i of buttons) {
       i.addEventListener('click', () => {
         siema.goTo(buttons.indexOf(i))
-        let active = document.querySelector('.active');
+        let active = document.querySelector('.updates-container .active');
         active.classList.remove('active');
         siemaControls[buttons.indexOf(i)].classList.add('active');
       });
@@ -62,7 +72,7 @@
     for (let i of controlButtons) {
       i.addEventListener('click', () => {
         progress.goTo(controlButtons.indexOf(i))
-        let active = document.querySelector('.active');
+        let active = document.querySelector('.slider-container .active');
         active.classList.remove('active');
         updatesControls[controlButtons.indexOf(i)].classList.add('active');
       });
