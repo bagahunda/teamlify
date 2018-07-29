@@ -6,8 +6,12 @@ mixin updates()
           picture
             source(media='(min-width: 1024px)', srcset='/assets/images/iphone-left--1024.png 1x, /assets/images/iphone-left--1024@2x.png 2x')
             source(media='(min-width: 480px)', srcset='/assets/images/iphone-left--480.png 1x, /assets/images/iphone-left--480@2x.png 2x')
-            img(src='/assets/images/iphone-left--1024.png', srcset='/assets/images/iphone-left--1024@2x.png 2x')
-          span No updates
+            img(src='/assets/images/iphone-left.png', srcset='/assets/images/iphone-left@2x.png 2x')
+          picture
+            source(media='(min-width: 1024px)', srcset='/assets/images/iphone-center--1024.png 1x, /assets/images/iphone-center--1024@2x.png 2x')
+            source(media='(min-width: 480px)', srcset='/assets/images/iphone-center--480.png 1x, /assets/images/iphone-center--480@2x.png 2x')
+            img(src='/assets/images/iphone-center.png', srcset='/assets/images/iphone-center@2x.png 2x')
+          //- span No updates
         div
           picture
             source(media='(min-width: 1024px)', srcset='/assets/images/iphone-center--1024.png 1x, /assets/images/iphone-center--1024@2x.png 2x')
