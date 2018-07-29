@@ -15,7 +15,12 @@
     padding 13px 23px 70px
     position relative
     background-color #171723
+    background-image url('../images/footer-bg.png')
+    background-repeat repeat
     z-index 2
+
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx)
+      background-image url('../images/footer-bg@2x.png')
 
     +above(480px)
       padding 20px 23px 105px

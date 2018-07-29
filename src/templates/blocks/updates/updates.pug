@@ -1,28 +1,36 @@
 mixin updates()
   .section.updates
     .slider-container
-      div
+      .updates__bg-left
         picture
-          source(media='(min-width: 1024px)', srcset='/assets/images/iphone-left--1024.png 1x, /assets/images/iphone-left--1024@2x.png 2x')
-          source(media='(min-width: 480px)', srcset='/assets/images/iphone-left--480.png 1x, /assets/images/iphone-left--480@2x.png 2x')
-          img(src='/assets/images/iphone-left.png', srcset='/assets/images/iphone-left@2x.png 2x')
+          source(media='(min-width: 1024px)', srcset='/assets/images/updates-bg-left--1024.png 1x, /assets/images/updates-bg-left--1024@2x.png 2x')
+          source(media='(min-width: 480px)', srcset='/assets/images/updates-bg-left--480.png 1x, /assets/images/updates-bg-left--480@2x.png 2x')
+          img(src='/assets/images/updates-bg-left.png', srcset='/assets/images/updates-bg-left@2x.png 2x')
+      .updates__bg-right
         picture
-          source(media='(min-width: 1024px)', srcset='/assets/images/iphone-center--1024.png 1x, /assets/images/iphone-center--1024@2x.png 2x')
-          source(media='(min-width: 480px)', srcset='/assets/images/iphone-center--480.png 1x, /assets/images/iphone-center--480@2x.png 2x')
-          img(src='/assets/images/iphone-center.png', srcset='/assets/images/iphone-center@2x.png 2x')
-        //- span No updates
-      div
-        picture
-          source(media='(min-width: 1024px)', srcset='/assets/images/iphone-center--1024.png 1x, /assets/images/iphone-center--1024@2x.png 2x')
-          source(media='(min-width: 480px)', srcset='/assets/images/iphone-center--480.png 1x, /assets/images/iphone-center--480@2x.png 2x')
-          img(src='/assets/images/iphone-center.png', srcset='/assets/images/iphone-center@2x.png 2x')
-        span Deadline is coming
-      div
-        picture
-          source(media='(min-width: 1024px)', srcset='/assets/images/iphone-right--1024.png 1x, /assets/images/iphone-right--1024@2x.png 2x')
-          source(media='(min-width: 480px)', srcset='/assets/images/iphone-right--480.png 1x, /assets/images/iphone-right--480@2x.png 2x')
-          img(src='/assets/images/iphone-right--480.png', srcset='/assets/images/iphone-right--480@2x.png 2x')
-        span Forget about report
+          img(src='/assets/images/updates-bg-right.png', srcset='/assets/images/updates-bg-right@2x.png 2x')
+      .updates-slider
+        div
+          picture
+            source(media='(min-width: 1024px)', srcset='/assets/images/iphone-left--1024.png 1x, /assets/images/iphone-left--1024@2x.png 2x')
+            source(media='(min-width: 480px)', srcset='/assets/images/iphone-left--480.png 1x, /assets/images/iphone-left--480@2x.png 2x')
+            img(src='/assets/images/iphone-left.png', srcset='/assets/images/iphone-left@2x.png 2x')
+          span No updates
+        div
+          picture
+            source(media='(min-width: 1024px)', srcset='/assets/images/iphone-center--1024.png 1x, /assets/images/iphone-center--1024@2x.png 2x')
+            source(media='(min-width: 480px)', srcset='/assets/images/iphone-center--480.png 1x, /assets/images/iphone-center--480@2x.png 2x')
+            img(src='/assets/images/iphone-center.png', srcset='/assets/images/iphone-center@2x.png 2x')
+          span Deadline is coming
+        div
+          picture
+            source(media='(min-width: 1024px)', srcset='/assets/images/iphone-right--1024.png 1x, /assets/images/iphone-right--1024@2x.png 2x')
+            source(media='(min-width: 480px)', srcset='/assets/images/iphone-right--480.png 1x, /assets/images/iphone-right--480@2x.png 2x')
+            img(src='/assets/images/iphone-right.png', srcset='/assets/images/iphone-right@2x.png 2x')
+          span Forget about report
+      .siema-controls
+        button
+        button
     h2.title.title--inner
       | Get timely updates from developers
     p.lead.lead--inner

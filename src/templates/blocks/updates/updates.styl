@@ -1,14 +1,96 @@
 .updates
+  position relative
   text-align center
 
+  +above(900px)
+    width 900px
+
+  +above(1037px)
+    width 900px
+
+  &__bg-left
+    position absolute
+    left 0
+    bottom 60px
+
+    +above(480px)
+      left -30px
+
+    +above(1024px)
+      left -40px
+      bottom 70px
+
+  &__bg-right
+    display none
+
+    +above(600px)
+      display block
+      position absolute
+      right -100px
+      bottom 30px
+
+    +above(1024px)
+      right -150px
+      bottom 50px
+
 .slider-container
+  position relative
   margin-bottom 20px
+  margin-right -23px
+  margin-left -23px
+
+  +above(600px)
+    padding-right 20px
+
+  +above(1024px)
+    margin-right 0
+    margin-left 0
+    padding-right 0
+
+  img
+    width 100%
+    +above(1024px)
+      width auto
+
+  // div div
+  //   width 414px !important
+
+  & > div
+    & > div
+      & >div
+        width 30% !important
+        background-color #232330
+        padding-right 12px
+
+        +above(480px)
+          padding-right 18px
+
+        +above(600px)
+          width 33.3333% !important
 
   span
     display block
     margin-top 5px
     font-size 8px
     text-align center
+
+    +above(480px)
+      font-size 11px
+
+    +above(1024px)
+      font-size 18px
+
+  .siema-controls
+    +above(600px)
+      display none
+
+.updates-slider
+  padding-left 20px
+  background-color #232330
+
+  +above(1024px)
+    padding-left 0
+    padding-right 0
 
 .siema-controls
   margin-top 5px
