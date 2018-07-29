@@ -1,0 +1,11 @@
+mixin about()
+  .section.about
+    .about__img
+      picture
+        source(media='(min-width: 1024px)', srcset='/assets/images/about--1024.png 1x, /assets/images/about--1024@2x.png 2x')
+        source(media='(min-width: 480px)', srcset='/assets/images/about--480.png 1x, /assets/images/about--480@2x.png 2x')
+        img(src='/assets/images/about.png', srcset='/assets/images/about@2x.png 2x')
+    h2.title.title--inner
+      | About us
+    p.lead.lead--inner
+      | At [ivelum] we've been working on many web development projects since 2003. Teamplify has initially appeared as an internal tool for our teams.  It has worked so well for us, that we thought it can be useful for other software development teams too. So now we are releasing it in public beta. We would appreciate your feedback a lot, and we'd like to learn about your development workflows and challenges. Please feel free  to get in touch!

@@ -1,0 +1,83 @@
+.footer
+  margin-top 66px
+  position relative
+  font-size 12px
+
+  +above(480px)
+    margin-top 100px
+    font-size 18px
+
+  +above(1024px)
+    margin-top 264px
+    font-size 24px
+
+  &__content
+    padding 13px 23px 70px
+    position relative
+    background-color #171723
+    z-index 2
+
+    +above(480px)
+      padding 20px 23px 105px
+
+    +above(1024px)
+      padding 44px calc((100% - 1037px)/2) 190px
+
+    +above(1280px)
+      padding 44px calc((100% - 1037px)/2) 250px
+
+    +above(1600px)
+      padding 44px calc((100% - 1037px)/2) 238px
+
+  p
+    margin 0 0 5px
+
+  &__bg
+    position absolute
+    right 10px
+    top -66px
+    z-index 1
+
+    +above(480px)
+      right 18px
+      top -100px
+
+    +above(1024px)
+      right 0
+      top -264px
+
+    +above(1280px)
+      right 28px
+
+    +above(1600px)
+      right 188px
+
+  &__bg1
+    position absolute
+    right 40px
+    top -107px
+    z-index 3
+
+    +above(480px)
+      right 62px
+      top -160px
+
+    +above(1024px)
+      right 23px
+      top -420px
+
+    +above(1280px)
+      right 150px
+
+    +above(1600px)
+      right 311px
+
+.copy
+  font-size 10px
+
+  +above(480px)
+    font-size 15px
+
+  +above(1024px)
+    margin-top 15px
+    font-size 18px

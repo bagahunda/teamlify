@@ -1,0 +1,65 @@
+.form-section
+  margin-left auto
+  margin-right auto
+
+.form
+  height 448px
+  margin-left -23px
+  margin-right -23px
+  padding-top 57px
+  padding-left 23px
+  padding-right 23px
+  background-image url('../images/form.png')
+  background-size cover
+  background-repeat no-repeat
+  background-position 50% 50%
+
+  +above(480px)
+    margin-top 45px
+    padding-top 85px
+    height 672px
+    background-image url('../images/form--480.png')
+
+  +above(1024px)
+    margin-top 80px
+    margin-left auto
+    margin-right auto
+    padding-top 120px
+    padding-left 120px
+    padding-right 120px
+    width 690px
+    height 666px
+    background-image url('../images/form--1024.png')
+
+  label
+    display block
+    margin-bottom 5px
+    font-size 18px
+
+    +above(480px)
+      font-size 27px
+
+    +above(1024px)
+      font-size 28px
+
+  &__row
+    margin-bottom 10px
+
+    &--submit
+      margin-top 20px
+      text-align center
+
+  .btn
+    width 100%
+    font-size 24px
+
+    +above(480px)
+      font-size 36px
+
+    +above(1024px)
+      width 200px
+      font-size 28px
+
+  .title
+    +above(1024px)
+      font-size 56px

@@ -1,0 +1,12 @@
+mixin form()
+  .section.form-section
+    form.form(action="#")
+      h2.title.title--inner Request a demo
+      .form__row
+        label(for="name") Your name
+        input.form-control(type="text" id="name" name="name" placeholder="Luke Skywalker")
+      .form__row
+        label(for="email") Your email
+        input.form-control(type="text" id="email" name="email" placeholder="luke@sky.com")
+      .form__row.form__row--submit
+        button.btn Free demo
