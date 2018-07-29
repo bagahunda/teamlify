@@ -1,0 +1,11 @@
+mixin remote()
+  +b.remote
+    +e.img
+      picture
+        source(media='(min-width: 1024px)', srcset='/assets/images/remote--1024.png 1x, /assets/images/remote--1024@2x.png 2x')
+        source(media='(min-width: 480px)', srcset='/assets/images/remote--480.png 1x, /assets/images/remote--480@2x.png 2x')
+        img(src='/assets/images/remote.png', srcset='/assets/images/remote@2x.png 2x')
+    h2.title.title--inner
+      | Remote teams friendly
+    p.lead.lead--inner
+      | Built-in public holidays for 180+ countries. Timezone-aware smart notifications.
