@@ -14,16 +14,17 @@
     bottom 60px
 
     +above(480px)
-      left -30px
+      left -20px
+      bottom 76px
 
     +above(1024px)
-      left -40px
+      left -60px
       bottom 70px
 
   &__bg-right
     display none
 
-    +above(600px)
+    +above(900px)
       display block
       position absolute
       right -100px
@@ -46,9 +47,6 @@
   margin-right -23px
   margin-left -23px
 
-  +above(600px)
-    padding-right 20px
-
   +above(1024px)
     margin-right 0
     margin-left 0
@@ -58,19 +56,6 @@
     width 100%
     +above(1024px)
       width auto
-
-  & > div
-    & > div
-      & >div
-        width 30% !important
-        background-color #232330
-        padding-right 12px
-
-        +above(480px)
-          padding-right 18px
-
-        +above(600px)
-          width 33.3333% !important
 
   span
     display block
@@ -84,41 +69,78 @@
     +above(1024px)
       font-size 18px
 
-  .siema-controls
+  .slick-dots
     +above(600px)
-      display none
+      display none !important
 
+.updates-slider
+  max-width 900px
+
+  +above(1024px)
+    position relative
+    z-index 2
+
+  +above(1024px)
+    padding-left 0
+    padding-right 0
+
+  .slick-list
+    padding-right 20px
+    padding-left 20px
+
+    +above(900px)
+      padding-left 0
+      padding-right 0
+
+  .slick-slide
+    padding 0 6px
+
+
+
+// second slider
 .updates-container
 
   img
     +above(1024px)
       max-width none
 
-.updates-slider
-  padding-left 20px
-  background-color #232330
 
-  +above(1024px)
-    padding-left 0
-    padding-right 0
-
-.siema-controls
+// overall style
+.slick-dots
+  padding 0
+  list-style none
   margin-top 5px
+  display flex !important
+  justify-content center
 
   +above(1024px)
-      display none
+      display none !important
+
+  li
+    &:not(:last-child)
+      margin-right 10px
+
   button
     width 8px
     height 8px
     padding 0
+    font-size 0
     border-radius 50%
     border 1px solid #ffffff
     background-color transparent
     outline none
 
-    &:not(:last-child)
-      margin-right 10px
-
-    &.active
+.slick-active
+    button
       border-color #C2F50F
       background-color #C2F50F
+
+.slick-slide
+  outline none
+
+  img
+    margin 0 auto
+
+.slick-track
+  background-color #232330
+

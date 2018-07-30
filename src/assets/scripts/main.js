@@ -2,6 +2,22 @@
 
   $('document').ready(function() {
 
+    $('a[href*="#"]:not([href="#"])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          if (myMenu.classList.contains('menu--visible')) {
+            toggleClassMenu();
+          }
+          $('html, body').animate({
+            scrollTop: target.offset().top - 50
+          }, 1000);
+          return false;
+        }
+      }
+    });
+
     function toggleClassMenu() {
       myMenu.classList.add("menu--animatable");
       if(!myMenu.classList.contains("menu--visible")) {
@@ -21,62 +37,35 @@
     oppMenu.addEventListener("click", toggleClassMenu, false);
     myMenu.addEventListener("click", toggleClassMenu, false);
 
-    const progress = new Siema({
-      selector: '.updates-slider',
-      perPage: {
-        320: 2,
-        600: 3
-      },
-      onChange: function() {
-        const target = document.querySelector('.updates-slider');
-        const updatesControls = document.querySelectorAll('.slider-container .siema-controls button');
-        let active = document.querySelector('.slider-container .active');
-        active.classList.remove('active');
-        updatesControls[this.currentSlide].classList.add('active');
-        if (progress.currentSlide === 1) {
-          target.style.paddingLeft = "12%";
-        } else {
-          target.style.paddingLeft = "20px";
+    $('.updates-slider').slick({
+      arrows: false,
+      mobileFirst: true,
+      dots: true,
+      slidesToShow: 2,
+      infinite: false,
+      responsive :[
+        {
+          breakpoint: 899,
+          settings: {
+            slidesToShow: 3
+          }
         }
-
-      }
-    })
-
-    const siema = new Siema({
-      perPage: {
-        1024: 3,
-      },
-      onChange: function() {
-        const updatesControls = document.querySelectorAll('.updates-container .siema-controls button');
-        let active = document.querySelector('.updates-container .active');
-        active.classList.remove('active');
-        updatesControls[this.currentSlide].classList.add('active');
-      }
+      ]
     });
 
-    const siemaControls = document.querySelectorAll('.updates-container .siema-controls button');
-    siemaControls[0].classList.add('active');
-    const buttons = Array.prototype.slice.call(siemaControls);
-    for (let i of buttons) {
-      i.addEventListener('click', () => {
-        siema.goTo(buttons.indexOf(i))
-        let active = document.querySelector('.updates-container .active');
-        active.classList.remove('active');
-        siemaControls[buttons.indexOf(i)].classList.add('active');
-      });
-    }
-
-    const updatesControls = document.querySelectorAll('.slider-container .siema-controls button')
-    updatesControls[0].classList.add('active');
-    const controlButtons = Array.prototype.slice.call(updatesControls);
-    for (let i of controlButtons) {
-      i.addEventListener('click', () => {
-        progress.goTo(controlButtons.indexOf(i))
-        let active = document.querySelector('.slider-container .active');
-        active.classList.remove('active');
-        updatesControls[controlButtons.indexOf(i)].classList.add('active');
-      });
-    }
+    $('.siema').slick({
+      arrows: false,
+      mobileFirst: true,
+      dots: true,
+      responsive :[
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3
+          }
+        }
+      ]
+    });
   });
 
 })(jQuery);
