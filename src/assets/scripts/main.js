@@ -3,6 +3,7 @@
   $('document').ready(function() {
 
     $('a[href*="#"]:not([href="#"])').click(function() {
+      const winWidth = window.innerWidth;
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
         var target = $(this.hash);
         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -10,9 +11,15 @@
           if (myMenu.classList.contains('menu--visible')) {
             toggleClassMenu();
           }
-          $('html, body').animate({
-            scrollTop: target.offset().top - 50
-          }, 1000);
+          if (winWidth < 700) {
+            $('html, body').animate({
+              scrollTop: target.offset().top - 87
+            }, 1000);
+          } else {
+            $('html, body').animate({
+              scrollTop: target.offset().top - 100
+            }, 1000);
+          }
           return false;
         }
       }
