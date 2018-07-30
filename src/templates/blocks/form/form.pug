@@ -4,9 +4,9 @@ mixin form()
       h2.title.title--inner Request a demo
       .form__row
         label(for="name") Your name
-        input.form-control(type="text" id="name" name="name" placeholder="Luke Skywalker")
+        input.form-control(type="text" id="name" name="name" placeholder="Luke Skywalker" required)
       .form__row
         label(for="email") Your email
-        input.form-control(type="text" id="email" name="email" placeholder="luke@sky.com")
+        input.form-control(type="email" id="email" name="email" placeholder="luke@sky.com" required)
       .form__row.form__row--submit
         button.btn Free demo
